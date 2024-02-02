@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Classification</title>
+    <link rel="stylesheet"  href="{{ url_for('static_files', filename='abcd.css') }}">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="{{ url_for('static_files', filename='a1.png') }}">
+        </div>
+        <div id="title">
+            <h1>Waste Classification</h1>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <img src="{{ url_for('video_feed') }}" alt="Object Classification Video Feed">
+    </main>
+
+    <footer>
+        <p>&copy; wasteclassifierpvtlmt</p>
+    </footer>
+</body>
+
+</html>

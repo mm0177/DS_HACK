@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Classification</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #ecf0f1;
+            padding: 0.5em 0;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        main {
+            text-align: center;
+            margin: 2em 5%;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.8em;
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 2em auto;
+            border: 5px solid #2ecc71;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media only screen and (max-width: 600px) {
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Waste Classification</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <img src="{{ url_for('video_feed') }}" alt="Object Classification Video Feed">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>

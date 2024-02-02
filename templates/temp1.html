@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static_files', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Waste Classification</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3 id="predicted-class">Loading...</h3>
+            
+        </div>
+        <div class="weather-data">
+
+            <div class="days-forecast">
+                <h2>Classifier</h2>
+                <main class="vid">
+                    <img src="{{ url_for('video_feed') }}" alt="Object Classification Video Feed">
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updatePredictedClass() {
+            fetch('/get_predicted_class')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('predicted-class').innerText = `Predicted: ${data}`;
+                });
+        }
+
+        setInterval(updatePredictedClass, 1000); // Update every 1 second
+
+        
+    </script>
+
+</body>
+
+</html>
